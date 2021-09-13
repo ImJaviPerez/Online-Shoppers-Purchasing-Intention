@@ -1,0 +1,20 @@
+ Feature,Description,Type 
+ `Administrative`,,Numerical
+ `Administrative_Duration`,URL information of the pages visited by,Numerical
+ `Informational` ,the user: number of different types of pages,Numerical
+ `ProductRelated`,visited by the visitor in that session and,Numerical
+ `Informational_Duration` ,total time spent in each of these page,Numerical
+ `ProductRelated_Duration`,categories,Numerical
+ `BounceRates`,Percentage of visitors who enter the site from that page and then leave ("bounce") without triggering any other requests to the analytics server during that session,Numerical
+ `ExitRates`,Feature for a specific web page calculated as for all pageviews to the page"," the percentage that were the last in the session,Numerical
+ `PageValues` ,The average value for a web page that a user visited before completing an ecommerce transaction,Numerical
+ `SpecialDay` ,Closeness of the site visiting time to a special day,Numerical 
+ `Month`,Month value of the visit date ,Categorical
+ `OperatingSystems` ,Operating system of the visitor,Categorical
+ `Browser` ,Browser of the visitor,Categorical
+ `Region`,Geographic region from which the session has been started by the visitor,Categorical
+ `TrafficType`,Traffic source by which the visitor has arrived at the website ,Categorical
+ `VisitorType`,Visitor type as `New_Visitor`"," `Returning_Visitor` and `Other` ,Categorical
+ `Weekend` ,Boolean value indicating whether the date of the visit is weekend ,Categorical
+ `Revenue` ,Class label indicating whether the visit has been finalized with a transaction,Categorical
+
