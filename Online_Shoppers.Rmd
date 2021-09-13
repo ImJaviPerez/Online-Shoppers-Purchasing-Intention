@@ -5,6 +5,12 @@ subtitle: "Model: Logit Generalized Linear Model (GLM)"
 author: "ImJaviPerez. UPV-EHU"
 date: "June, 2021"
 output:
+  html_document:
+    df_print: paged
+    toc: yes
+    toc_depth: '3'
+    number_sections: yes
+    fig_caption: yes
   pdf_document:
     keep_tex: yes
     number_sections: yes
@@ -12,12 +18,6 @@ output:
     toc_depth: 3
     fig_caption: yes
     fig_height: 4
-  html_document:
-    df_print: paged
-    toc: yes
-    toc_depth: '3'
-    number_sections: yes
-    fig_caption: yes
 header-includes:
 - \usepackage{float}          # To insert figures caption
 - \floatplacement{figure}{H}  # To insert figures caption
@@ -364,10 +364,12 @@ save(list = ls()[grepl(pattern_vars, ls())], file=o_s_environment)
 # The SMOTE algorithm spends a lot of time for it's calculations, thus we have made
 # those datasets in an other script and now we load those results.
 smote_datasets_file <- "o_s_SMOTE_NC_datasets.RData" 
-# File where are sasved SMOTE_NC datasets
+# File where are saved SMOTE_NC datasets
 smote_datasets_file <- file.path(getwd(), "data", "o_s_SMOTE_NC_datasets.RData")
 if (file.exists(smote_datasets_file)) {
   load(smote_datasets_file)
+}else{
+  stop(paste("File", smote_datasets_file, "DO NOT EXISTS. You must create this file using the script SMOTE_NC_create_datasets.R"))
 }
 #file.exists(smote_datasets_file)
 ```
